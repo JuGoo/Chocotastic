@@ -1,7 +1,10 @@
 package com.gourdet.julien.chocotastic.navigation
 
 import android.content.Context
+import android.support.v4.app.ActivityOptionsCompat
+import android.support.v4.app.FragmentActivity
 import android.view.View
+import android.widget.ImageView
 import com.gourdet.julien.chocotastic.features.list.ChocolatesActivity
 import javax.inject.Inject
 import javax.inject.Singleton

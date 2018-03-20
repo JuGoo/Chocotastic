@@ -1,5 +1,7 @@
 package com.gourdet.julien.chocotastic.features.list
 
+
+import com.gourdet.julien.chocotastic.framework.interactor.UseCase.None
 import com.gourdet.julien.chocotastic.navigation.Navigator
 import javax.inject.Inject
 
@@ -13,18 +15,16 @@ class ChocolatesPresenter
     internal lateinit var chocolatesView: ChocolatesView
 
     fun destroy() {
-        getChocolates.dispose()
-        chocolatesView.dispose()
     }
 
     fun loadChocolates() {
         chocolatesView.showLoading()
         getChocolates.execute(
                 { chocolates -> chocolatesView.renderList(chocolates.map { ChocolateViewModel(it.id, it.name) })
-                    chocolatesView.hideLoading() },
-                { TODO() })
+                    chocolatesView.hideLoading() }, None())
+
     }
 
-    fun onMovieClick(movieViewModel: ChocolateViewModel, navigationExtras: Navigator.Extras) =
-            chocolatesView.displayDetails(movieViewModel, navigationExtras)
+    //fun onMovieClick(movieViewModel: ChocolateViewModel, navigationExtras: Navigator.Extras) =
+      //      chocolatesView.displayDetails(movieViewModel, navigationExtras)
 }

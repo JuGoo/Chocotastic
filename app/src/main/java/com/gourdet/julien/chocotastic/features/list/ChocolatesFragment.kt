@@ -3,6 +3,7 @@ package com.gourdet.julien.chocotastic.features.list
 import android.os.Bundle
 import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.View
+import android.widget.Toast
 import com.gourdet.julien.chocotastic.BaseFragment
 import com.gourdet.julien.chocotastic.R
 import com.gourdet.julien.chocotastic.navigation.Navigator
@@ -14,12 +15,9 @@ import javax.inject.Inject
  */
 class ChocolatesFragment: BaseFragment(), ChocolatesView {
 
-    @Inject
-    lateinit var navigator: Navigator
-    @Inject
-    lateinit var chocolatesPresenter: ChocolatesPresenter
-    @Inject
-    lateinit var chocolatesAdapter: ChocolatesAdapter
+    @Inject lateinit var navigator: Navigator
+    @Inject lateinit var chocolatesPresenter: ChocolatesPresenter
+    @Inject lateinit var chocolatesAdapter: ChocolatesAdapter
 
     override fun layoutId() = R.layout.fragment_chocolates
 
@@ -28,7 +26,7 @@ class ChocolatesFragment: BaseFragment(), ChocolatesView {
         appComponent.inject(this)
     }
 
-    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initializeView()
         if (firstTimeCreated(savedInstanceState)) { initializeView(); loadChocolates() }
@@ -43,26 +41,23 @@ class ChocolatesFragment: BaseFragment(), ChocolatesView {
         chocolatesAdapter.collection = chocolates
     }
 
-    override fun displayDetails(chocolate: ChocolateViewModel, navigationExtras: Navigator.Extras) {
+    //override fun displayDetails(chocolate: ChocolateViewModel, navigationExtras: Navigator.Extras) {
         //navigator.showMovieDetails(activity, movie, navigationExtras)
-    }
+    //}
 
     override fun showLoading() {
         //TODO: implement method
+        Toast.makeText(this.activity,"",Toast.LENGTH_LONG).show()
     }
 
     override fun hideLoading() {
         //TODO: implement method
     }
 
-    override fun dispose() {
-        //TODO: dispose view resources
-    }
-
     private fun initializeView() {
         chocolatesList.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
-        chocolatesAdapter.clickListener =
-                { movieViewModel, navigationExtras ->  chocolatesPresenter.onMovieClick(movieViewModel, navigationExtras) }
+        //chocolatesAdapter.clickListener =
+        //        { movieViewModel, navigationExtras ->  chocolatesPresenter.onMovieClick(movieViewModel, navigationExtras) }
         chocolatesList.adapter = chocolatesAdapter
         chocolatesPresenter.chocolatesView = this
     }

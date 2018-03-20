@@ -1,18 +1,19 @@
 package com.gourdet.julien.chocotastic.features.list
 
-import io.reactivex.Single
 import javax.inject.Inject
 
 /**
  * Created by Julien on 16/03/2018.
  */
 interface ChocolatesRepository {
-    fun chocolates(): Single<List<Chocolate>>
-    //fun movieDetails(movieId: Int): Single<MovieDetails>
+    fun chocolates(): List<Chocolate>
 
-    class Source
-    @Inject constructor(private val dataSourceFactory: ChocolatesDataSource.Factory) : ChocolatesRepository {
-        override fun chocolates(): Single<List<Chocolate>> = dataSourceFactory.network().chocolates()
-        //override fun movieDetails(movieId: Int) = dataSourceFactory.network().movieDetails(movieId)
+    class Network
+    @Inject constructor(private val service: ChocolatesService) : ChocolatesRepository {
+
+        override fun chocolates(): List<Chocolate> {
+            val chocolateList = service.chocolates().execute().body() ?: emptyList()
+            return chocolateList.map { it.toChocolate() }
+        }
     }
 }

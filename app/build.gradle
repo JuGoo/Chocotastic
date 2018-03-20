@@ -39,6 +39,8 @@ dependencies {
 
     //Application dependencies
     implementation applicationDependencies.kotlin
+    implementation applicationDependencies.kotlinCoroutines
+    implementation applicationDependencies.kotlinCoroutinesAndroid
     implementation applicationDependencies.appCompat
     implementation applicationDependencies.cardView
     implementation applicationDependencies.recyclerView
@@ -46,10 +48,7 @@ dependencies {
     implementation applicationDependencies.androidAnnotations
     implementation applicationDependencies.glide
     implementation applicationDependencies.dagger
-    implementation applicationDependencies.rxJava
-    implementation applicationDependencies.rxAndroid
     implementation applicationDependencies.retrofit
-    implementation applicationDependencies.retrofitAdapter
     implementation applicationDependencies.okhttpLoggingInterceptor
 
 

@@ -3,10 +3,7 @@ package com.gourdet.julien.chocotastic.di
 import android.content.Context
 import com.gourdet.julien.chocotastic.AndroidApplication
 import com.gourdet.julien.chocotastic.BuildConfig
-import com.gourdet.julien.chocotastic.framework.executor.ExecutionScheduler
-import com.gourdet.julien.chocotastic.framework.executor.ThreadScheduler
-import com.gourdet.julien.chocotastic.framework.network.Endpoints
-import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
+import com.gourdet.julien.chocotastic.features.list.ChocolatesRepository
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -20,14 +17,11 @@ class ApplicationModule(private val application: AndroidApplication) {
 
     @Provides @Singleton fun provideApplicationContext(): Context = application
 
-    @Provides @Singleton fun provideExecutionScheduler(threadScheduler: ThreadScheduler): ExecutionScheduler = threadScheduler
-
     @Provides @Singleton fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-                .baseUrl(Endpoints.BASE)
+                .baseUrl("https://raw.githubusercontent.com/JuGoo/Chocotastic/blob/master/Data/")
                 .client(createClient())
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
     }
 
@@ -39,4 +33,6 @@ class ApplicationModule(private val application: AndroidApplication) {
         }
         return okHttpClientBuilder.build()
     }
+
+    @Provides @Singleton fun provideChocolatesRepository(dataSource: ChocolatesRepository.Network): ChocolatesRepository = dataSource
 }

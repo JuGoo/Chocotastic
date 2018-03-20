@@ -1,8 +1,7 @@
 package com.gourdet.julien.chocotastic.features.list
 
-import com.gourdet.julien.chocotastic.framework.executor.ExecutionScheduler
 import com.gourdet.julien.chocotastic.framework.interactor.UseCase
-import io.reactivex.Single
+import com.gourdet.julien.chocotastic.framework.interactor.UseCase.None
 import javax.inject.Inject
 
 /**
@@ -10,9 +9,7 @@ import javax.inject.Inject
  */
 
 class GetChocolates
-@Inject constructor(private val chocolatesRepository: ChocolatesRepository,
-                    private val scheduler: ExecutionScheduler) : UseCase.RxSingle<List<Chocolate>, UseCase.None>() {
+@Inject constructor(private val chocolatesRepository: ChocolatesRepository) : UseCase<List<Chocolate>, None>() {
 
-    override fun build(params: None?): Single<List<Chocolate>> =
-            chocolatesRepository.chocolates().compose(scheduler.highPrioritySingle())
+    override suspend fun run(params: None) = chocolatesRepository.chocolates()
 }

@@ -30,9 +30,9 @@ class ChocolatesAdapter
     override fun getItemCount() = collection.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(movieViewModel: ChocolateViewModel, clickListener: (ChocolateViewModel, Navigator.Extras) -> Unit) {
-            itemView.chocolatePoster.loadFromUrl(movieViewModel.name)
-            itemView.setOnClickListener { clickListener(movieViewModel, Navigator.Extras(itemView.chocolatePoster)) }
+        fun bind(chocolateViewModel: ChocolateViewModel, clickListener: (ChocolateViewModel, Navigator.Extras) -> Unit) {
+            itemView.chocolatePoster.loadFromUrl(chocolateViewModel.name)
+            itemView.setOnClickListener { clickListener(chocolateViewModel, Navigator.Extras(itemView.chocolatePoster)) }
         }
     }
 }

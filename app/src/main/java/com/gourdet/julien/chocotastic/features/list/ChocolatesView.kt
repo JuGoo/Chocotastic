@@ -7,7 +7,7 @@ import com.gourdet.julien.chocotastic.navigation.Navigator
  * Created by Julien on 16/03/2018.
  */
 interface ChocolatesView : LoadingView {
-    fun renderList(movies: List<ChocolateViewModel>)
-    fun displayDetails(chocolate: ChocolateViewModel, navigationExtras: Navigator.Extras)
-    fun dispose()
+    fun renderList(chocolates: List<ChocolateViewModel>)
+    //fun displayDetails(chocolate: ChocolateViewModel, navigationExtras: Navigator.Extras)
+    //fun dispose()
 }
