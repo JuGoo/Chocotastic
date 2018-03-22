@@ -1,21 +1,27 @@
 [{
 		"id": 1,
-		"name": "Orange Juice"
+		"name": "Tablette noir 70% origine Equateur",
+		"image": "https://www.chocolat-castelain.fr/1436-tm_thickbox_default/tablette-noir-70-origine-equateur.jpg"
 	},
 	{
 		"id": 2,
-		"name": "Apple Juice"
+		"name": "Tablette noir 73% origine Tanzanie",
+		"image": "https://www.chocolat-castelain.fr/1437-tm_thickbox_default/tablette-noir-73-origine-tanzanie.jpg"
 	}, {
 		"id": 3,
-		"name": "Perry Juice"
+		"name": "Ballotin - Chocolats Terres de cacao",
+		"image": "https://www.chocolat-castelain.fr/934-tm_thickbox_default/ballotin-chocolats-terres-de-cacao.jpg"
 	}, {
 		"id": 4,
-		"name": "Cranberry Juice"
+		"name": "Tablette de chocolat au lait, Mexique 42 %",
+		"image": "https://www.chocolat-castelain.fr/1452-tm_thickbox_default/tablette-de-chocolat-au-lait-mexique-42-.jpg"
 	}, {
 		"id": 5,
-		"name": "Beer"
+		"name": "Tablette noir 68% origine Madagascar",
+		"image": "https://www.chocolat-castelain.fr/1453-tm_thickbox_default/tablette-noir-68-origine-madagascar.jpg"
 	}, {
 		"id": 6,
-		"name": "Mojito"
+		"name": "Napolitains de chocolat pures origines, en étui de 16 pièces",
+		"image": "https://www.chocolat-castelain.fr/1476-tm_thickbox_default/napolitains-de-chocolat-pures-origines-en-etui-de-16-pieces.jpg"
 	}
 ]

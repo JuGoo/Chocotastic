@@ -19,7 +19,7 @@ class ApplicationModule(private val application: AndroidApplication) {
 
     @Provides @Singleton fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-                .baseUrl("https://raw.githubusercontent.com/JuGoo/Chocotastic/blob/master/Data/")
+                .baseUrl("https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/")
                 .client(createClient())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
