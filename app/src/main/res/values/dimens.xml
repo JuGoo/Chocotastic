@@ -9,4 +9,6 @@
 
     <dimen name="chocolate_details_title">20dp</dimen>
     <dimen name="chocolate_details_text">15dp</dimen>
+
+    <dimen name="spinner_size">20dp</dimen>
 </resources>

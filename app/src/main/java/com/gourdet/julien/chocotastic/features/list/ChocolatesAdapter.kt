@@ -31,7 +31,7 @@ class ChocolatesAdapter
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(chocolateViewModel: ChocolateViewModel, clickListener: (ChocolateViewModel, Navigator.Extras) -> Unit) {
-            itemView.chocolatePoster.loadFromUrl(chocolateViewModel.name)
+            itemView.chocolatePoster.loadFromUrl(chocolateViewModel.image)
             itemView.setOnClickListener { clickListener(chocolateViewModel, Navigator.Extras(itemView.chocolatePoster)) }
         }
     }

@@ -13,5 +13,5 @@ class ChocolatesService
     private val chocolatesApi by lazy { retrofit.create(ChocolatesApi::class.java) }
 
     override fun chocolates() = chocolatesApi.chocolates()
-    //override fun movieDetails(movieId: Int) = moviesApi.movieDetails(movieId)
+    override fun chocolateDetails(chocolateId: Int) = chocolatesApi.chocolateDetails(chocolateId)
 }

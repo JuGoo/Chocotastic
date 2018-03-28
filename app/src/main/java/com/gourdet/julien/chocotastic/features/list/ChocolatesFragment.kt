@@ -3,6 +3,8 @@ package com.gourdet.julien.chocotastic.features.list
 import android.os.Bundle
 import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.Toast
 import com.gourdet.julien.chocotastic.BaseFragment
 import com.gourdet.julien.chocotastic.R
@@ -41,23 +43,25 @@ class ChocolatesFragment: BaseFragment(), ChocolatesView {
         chocolatesAdapter.collection = chocolates
     }
 
-    //override fun displayDetails(chocolate: ChocolateViewModel, navigationExtras: Navigator.Extras) {
-        //navigator.showMovieDetails(activity, movie, navigationExtras)
-    //}
+    override fun displayDetails(chocolate: ChocolateViewModel, navigationExtras: Navigator.Extras) {
+        activity?.let { navigator.showChocolateDetails(it, chocolate, navigationExtras) }
+    }
 
     override fun showLoading() {
         //TODO: implement method
-        Toast.makeText(this.activity,"",Toast.LENGTH_LONG).show()
+        //Toast.makeText(this.activity,"",Toast.LENGTH_LONG).show()
+        spinner.visibility = VISIBLE
     }
 
     override fun hideLoading() {
         //TODO: implement method
+        spinner.visibility = GONE
     }
 
     private fun initializeView() {
         chocolatesList.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
-        //chocolatesAdapter.clickListener =
-        //        { movieViewModel, navigationExtras ->  chocolatesPresenter.onMovieClick(movieViewModel, navigationExtras) }
+        chocolatesAdapter.clickListener =
+                { movieViewModel, navigationExtras ->  chocolatesPresenter.onChocolateClick(movieViewModel, navigationExtras) }
         chocolatesList.adapter = chocolatesAdapter
         chocolatesPresenter.chocolatesView = this
     }

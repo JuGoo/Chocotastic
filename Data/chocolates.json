@@ -1,27 +1,27 @@
 [{
 		"id": 1,
 		"name": "Tablette noir 70% origine Equateur",
-		"image": "https://www.chocolat-castelain.fr/1436-tm_thickbox_default/tablette-noir-70-origine-equateur.jpg"
+		"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate1.png"
 	},
 	{
 		"id": 2,
 		"name": "Tablette noir 73% origine Tanzanie",
-		"image": "https://www.chocolat-castelain.fr/1437-tm_thickbox_default/tablette-noir-73-origine-tanzanie.jpg"
+		"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate2.png"
 	}, {
 		"id": 3,
 		"name": "Ballotin - Chocolats Terres de cacao",
-		"image": "https://www.chocolat-castelain.fr/934-tm_thickbox_default/ballotin-chocolats-terres-de-cacao.jpg"
+		"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate3.png"
 	}, {
 		"id": 4,
 		"name": "Tablette de chocolat au lait, Mexique 42 %",
-		"image": "https://www.chocolat-castelain.fr/1452-tm_thickbox_default/tablette-de-chocolat-au-lait-mexique-42-.jpg"
+		"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate4.png"
 	}, {
 		"id": 5,
 		"name": "Tablette noir 68% origine Madagascar",
-		"image": "https://www.chocolat-castelain.fr/1453-tm_thickbox_default/tablette-noir-68-origine-madagascar.jpg"
+		"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate5.png"
 	}, {
 		"id": 6,
 		"name": "Napolitains de chocolat pures origines, en étui de 16 pièces",
-		"image": "https://www.chocolat-castelain.fr/1476-tm_thickbox_default/napolitains-de-chocolat-pures-origines-en-etui-de-16-pieces.jpg"
+		"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate6.png"
 	}
 ]

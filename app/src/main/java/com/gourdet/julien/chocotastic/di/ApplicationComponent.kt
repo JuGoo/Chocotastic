@@ -1,6 +1,7 @@
 package com.gourdet.julien.chocotastic.di
 
 import com.gourdet.julien.chocotastic.AndroidApplication
+import com.gourdet.julien.chocotastic.features.details.ChocolateDetailsFragment
 import com.gourdet.julien.chocotastic.features.list.ChocolatesFragment
 import com.gourdet.julien.chocotastic.navigation.RouteActivity
 import dagger.Component
@@ -15,7 +16,7 @@ interface ApplicationComponent {
 
     //TODO: do scoping here
     fun inject(chocolatesFragment: ChocolatesFragment)
-//    fun inject(movieDetailsFragment: MovieDetailsFragment)
+    fun inject(chocolateDetailsFragment: ChocolateDetailsFragment)
 
     //fun subComponentBuilders(): Map<Class<*>, Provider<SubcomponentBuilder<*>>>
 }

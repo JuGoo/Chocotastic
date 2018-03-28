@@ -5,6 +5,8 @@ import android.support.v4.app.ActivityOptionsCompat
 import android.support.v4.app.FragmentActivity
 import android.view.View
 import android.widget.ImageView
+import com.gourdet.julien.chocotastic.features.details.ChocolateDetailsActivity
+import com.gourdet.julien.chocotastic.features.list.ChocolateViewModel
 import com.gourdet.julien.chocotastic.features.list.ChocolatesActivity
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -22,18 +24,17 @@ class Navigator
         showChocolates(context)
     }
 
-    /*fun showMovieDetails(activity: FragmentActivity, movie: MovieViewModel, navigationExtras: Extras) {
-        val intent = MovieDetailsActivity.callingIntent(activity, movie)
-        val sharedView = navigationExtras.transitionSharedElement as ImageView
-        val activityOptions = ActivityOptionsCompat
-                .makeSceneTransitionAnimation(activity, sharedView, sharedView.transitionName)
-        activity.startActivity(intent, activityOptions.toBundle())
+    fun showChocolateDetails(activity: FragmentActivity, chocolate: ChocolateViewModel, navigationExtras: Extras) {
+        val intent = ChocolateDetailsActivity.callingIntent(activity, chocolate)
+        //val sharedView = navigationExtras.transitionSharedElement as ImageView
+        //val activityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(activity, sharedView, sharedView.transitionName)
+        activity.startActivity(intent)
     }
 
-    private fun showLogin(context: Context) = context.startActivity(LoginActivity.callingIntent(context))*/
-    private fun showChocolates(context: Context) = context.startActivity(ChocolatesActivity.callingIntent(context))
+/*private fun showLogin(context: Context) = context.startActivity(LoginActivity.callingIntent(context))*/
+private fun showChocolates(context: Context) = context.startActivity(ChocolatesActivity.callingIntent(context))
 
-    class Extras(val transitionSharedElement: View)
+class Extras(val transitionSharedElement: View)
 }
 
 

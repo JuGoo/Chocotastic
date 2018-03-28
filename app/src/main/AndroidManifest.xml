@@ -29,6 +29,12 @@
             android:name=".features.list.ChocolatesActivity"
             android:label="@string/app_name">
         </activity>
+
+        <activity
+            android:name=".features.details.ChocolateDetailsActivity"
+            android:label="@string/chocolate_details_screen_title">
+        </activity>
+
     </application>
 
 </manifest>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Chocotastic</string>
+    <string name="chocolate_details_screen_title">Chocolate details</string>
 </resources>

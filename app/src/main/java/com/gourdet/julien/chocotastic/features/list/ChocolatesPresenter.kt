@@ -20,11 +20,13 @@ class ChocolatesPresenter
     fun loadChocolates() {
         chocolatesView.showLoading()
         getChocolates.execute(
-                { chocolates -> chocolatesView.renderList(chocolates.map { ChocolateViewModel(it.id, it.name) })
-                    chocolatesView.hideLoading() }, None())
+                { chocolates -> chocolatesView.renderList(
+                        chocolates.map { ChocolateViewModel(it.id, it.name, it.image) })
+                    chocolatesView.hideLoading()
+                }, None())
 
     }
 
-    //fun onMovieClick(movieViewModel: ChocolateViewModel, navigationExtras: Navigator.Extras) =
-      //      chocolatesView.displayDetails(movieViewModel, navigationExtras)
+    fun onChocolateClick(chocolateViewModel: ChocolateViewModel, navigationExtras: Navigator.Extras) =
+            chocolatesView.displayDetails(chocolateViewModel, navigationExtras)
 }
