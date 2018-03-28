@@ -1,0 +1,9 @@
+{
+	"id": "2",
+	"name": "Tablette noir 73% origine Tanzanie",
+	"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate2.png",
+    "summary": "Notre tablette origine Tanzanie, bien cacaotée, développe un nez vanillé. En bouche, une palette de notes fruitées complète les arômes herbacés.",
+    "composition": "Cacao : 73% minimum. Produit pur beurre de cacao.",
+    "weight": 100,
+    "price": 3.30
+}

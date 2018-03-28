@@ -1,0 +1,9 @@
+{
+	"id": "4",
+	"name": "Tablette de chocolat au lait, Mexique 42 %",
+	"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate4.png",
+    "summary": "Toute douce et à la texture fondante, notre tablette au chocolat au lait origine Mexique offre une grande complexité et développe des notes acidulées. Arômes de fruits jaunes et quelques notes florales. Pas seulement pour les enfants … !",
+    "composition": "Cacao : 42% minimum. Produit pur beurre de cacao.",
+    "weight": 100,
+    "price": 2.90
+}

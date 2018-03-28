@@ -1,0 +1,9 @@
+{
+	"id": "6",
+	"name": "Napolitains de chocolat pures origines, en étui de 16 pièces",
+	"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate6.png",
+    "summary": "Incontournable accompagnement de la pause café ! Cet Assortiment de notre sélection d'origines vous offrira l'occasion de voyager d'un pays à l'autre, en vous laissant surprendre par les arômes caractéristiques de chaque terroir. Du boisé au fruité, de l'herbacé à l'acidulé, lequel sera votre préféré ?",
+    "composition": "pâte de cacao Mexique ; pâte de cacao Saint-Domingue ; pâte de cacao Tanzanie...",
+    "weight": 800,
+    "price": 20.10
+}

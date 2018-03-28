@@ -1,0 +1,9 @@
+{
+	"id": "1",
+	"name": "Tablette noir 70% origine Equateur",
+	"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate1.png",
+    "summary": "Notre tablette origine Equateur, bien équilibrée, développe un nez fruité. En bouche, une palette de notes herbacées complète les aromes de fleurs tropicales.",
+    "composition": "Cacao : 70% minimum. Produit pur beurre de cacao.",
+    "weight": 100,
+    "price": 3.90
+}

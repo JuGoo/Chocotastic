@@ -1,0 +1,9 @@
+{
+	"id": "3",
+	"name": "Ballotin - Chocolats Terres de cacao",
+	"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate3.png",
+    "summary": "Voyagez au cœur des origines du cacao en laissant vos sens vous transporter au gré des différentes saveurs et intensités de ces ganaches. Nous avons sélectionné pour vous des terroirs complexes où les signatures aromatiques devraient enchanter les plus exigeants. Vanillée, boisée, fumée, florale, herbacée... autant de notes à retrouver en dégustation .",
+    "composition": "pâte de cacao Mexique ; pâte de cacao Papouasie Nouvelle Guinée ...",
+    "weight": 500,
+    "price": 15.20
+}

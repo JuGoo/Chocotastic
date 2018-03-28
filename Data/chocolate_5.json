@@ -1,0 +1,9 @@
+{
+	"id": "5",
+	"name": "Tablette noir 68% origine Madagascar",
+	"image": "https://raw.githubusercontent.com/JuGoo/Chocotastic/master/Data/images/chocolate5.png",
+    "summary": "Notre tablette origine Madagascar, légèrement acidulée, développe un nez boisé. En bouche, une palette de notes de grillé complète les arômes de fruits noirs.",
+    "composition": "Cacao : 68% minimum. Produit pur beurre de cacao.",
+    "weight": 100,
+    "price": 3.10
+}
